@@ -122,7 +122,7 @@ class HBNBCommand(cmd.Cmd):
             args = args.split()
 
             if args[0] not in self.classes:
-                raise SyntaxError()
+                raise KeyError()
             obj = eval(args[0] + '()')
         except SyntaxError:
             print("** class name missing **")
