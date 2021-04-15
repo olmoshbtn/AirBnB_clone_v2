@@ -11,10 +11,9 @@ mkdir -p /data/web_static/shared/
 echo "<!DOCTYPE html>
 <html>
         <head>
-                <title>Holberton School</title>
         </head>
         <body>
-                <h1>Holberton School</h1>
+                Holberton School
         </body>
 </html>" > /data/web_static/releases/test/index.html
 ln -sfn /data/web_static/releases/test/ /data/web_static/current
