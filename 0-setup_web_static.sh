@@ -10,18 +10,17 @@ fi
 sudo ufw allow 'Nginx HTTP'
 mkdir -p /data/web_static/shared
 mkdir -p /data/web_static/releases/test
-echo "<!DOCTYPE html>
-<html>
-        <head>
-        </head>
-        <body>
-                Holberton School
-        </body>
+echo "<html>
+  <head>
+  </head>
+  <body>
+    ¡Vamo La Cooperativa!
+  </body>
 </html>" > /data/web_static/releases/test/index.html
 if [ -e "/data/web_static/current" ]; then
     rm /data/web_static/current
 fi
 ln -sf /data/web_static/releases/test/ /data/web_static/current
 sudo chown -R ubuntu:ubuntu /data/
-sed -i "/server_name _;/a \\\n\tlocation /hbnb_static {\n\t\talias /data/web_static/current;\n\t}\n"
+sed - i "/server_name _;/a \\\n\tlocation /hbnb_static {\n\t\talias /data/web_static/current;\n\t}\n" /etc/nginx/sites-available/default
 sudo service nginx restart
