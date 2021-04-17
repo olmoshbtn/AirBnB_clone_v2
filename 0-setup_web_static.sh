@@ -23,4 +23,4 @@ fi
 ln -sf /data/web_static/releases/test/ /data/web_static/current
 sudo chown -R ubuntu:ubuntu /data/
 new_string="\\\n\tlocation /hbnb_static {\n\t\talias /data/web_static/current;\n\t}\n"
-sed -i "42i $new_string" /etc/nginx/sites-available/default
+sed -i "43i $new_string" /etc/nginx/sites-available/default
