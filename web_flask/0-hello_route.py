@@ -12,7 +12,8 @@ def index():
     """
     Site Index
     """
-    return 'Hello HBTN!'
+    return 'Hello HBNB!'
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
