@@ -3,7 +3,7 @@
 Start a Flask web application
 """
 
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 
@@ -38,6 +38,22 @@ def python_text(text='is_cool'):
     Python is cool!
     """
     return ' '.join(['Python', text.replace('_', ' ')])
+
+
+@app.route('/number/<int:n>', strict_slashes=False)
+def number_n(n):
+    """
+    Display 'n is a number', only if n is an integer
+    """
+    return '{} is a number'.format
+
+
+@app.route('/number_template/<int:n>', strict_slashes=False)
+def number_template_n(n):
+    """
+    Display a HTML page only if n is an integer
+    """
+    return render_template('5-number.html', n=n)
 
 
 if __name__ == '__main__':

@@ -3,7 +3,6 @@
 Start a Flask web application
 """
 
-from typing import Text
 from flask import Flask
 app = Flask(__name__)
 
@@ -46,7 +45,7 @@ def number_n(n):
     """
     Display 'n is a number', only if n is an integer
     """
-    return '{} is a number'.format(n)
+    return '{} is a number'.format
 
 
 if __name__ == '__main__':
