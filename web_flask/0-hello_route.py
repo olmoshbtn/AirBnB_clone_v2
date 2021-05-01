@@ -1,19 +1,14 @@
 #!/usr/bin/python3
-"""
-Start a Flask web application
-"""
-
+"""Script that starts a Flask web application"""
 from flask import Flask
+
 app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def index():
-    """
-    Site Index
-    """
-    return  "Hello HBNB!"
+def hello():
+    """Display Hello"""
+    return 'Hello HBNB!'
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run()
