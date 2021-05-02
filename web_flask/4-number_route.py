@@ -31,6 +31,15 @@ def c_text(text):
     return ' '.join(['C', text.replace('_', ' ')])
 
 
+@app.route('/python/', strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
+def python_text(text='is_cool'):
+    """
+    Python is cool!
+    """
+    return ' '.join(['Python', text.replace('_', ' ')])
+
+
 @app.route('/number/<int:n>', strict_slashes=False)
 def number_n(n):
     """
