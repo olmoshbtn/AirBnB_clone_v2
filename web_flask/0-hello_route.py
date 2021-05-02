@@ -12,7 +12,7 @@ def index():
     """
     Site Index
     """
-    return  "Hello HBNB!"
+    return "Hello HBNB!"
 
 
 if __name__ == "__main__":
