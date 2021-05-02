@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Create a tarball containing the contents of web_static
+"""
+Create a tarball containing the contents of web_static
 """
 
 from os.path import isfile, join
